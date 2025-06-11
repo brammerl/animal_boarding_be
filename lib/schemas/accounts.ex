@@ -5,6 +5,6 @@ defmodule AnimalBoarding.Accounts do
   schema "accounts" do
     field(:primary_credit_card, :string)
     has_many(:users, AnimalBoarding.Users, foreign_key: :parent_account)
-    has_many(:animals, AnimalBoarding.Animals, foreign_key: :parent_account)
+    has_many(:animals, AnimalBoarding.Animals, foreign_key: :account_id)
   end
 end

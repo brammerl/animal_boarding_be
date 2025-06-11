@@ -6,7 +6,7 @@ defmodule AnimalBoarding.HousingUnits do
     field(:unit_name, :string)
     field(:capacity, :integer)
     field(:is_available, :boolean)
-    has_many(:animals, AnimalBoarding.Animals, foreign_key: :unit)
+    has_many(:animals, AnimalBoarding.Animals, foreign_key: :housing_unit_id)
 
     belongs_to(:zone, AnimalBoarding.Zones,
       foreign_key: :parent_zone,

@@ -3,7 +3,7 @@ defmodule AnimalBoarding.Species do
   @primary_key {:species_id, :binary_id, autogenerate: true}
 
   schema "species" do
-    field(:species_description, :string)
+    field(:species, :string)
 
     has_many(:animals, AnimalBoarding.Animals,
       foreign_key: :species_id,
