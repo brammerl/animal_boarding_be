@@ -11,6 +11,12 @@ defmodule AnimalBoarding.Animals do
     field(:pet_birthday, :utc_datetime)
     field(:pet_notes, :string)
 
+    belongs_to(:accounts, AnimalBoarding.Accounts,
+      foreign_key: :parent_account,
+      references: :account_id,
+      type: :binary_id
+    )
+
     belongs_to(:housing_unit, AnimalBoarding.HousingUnits,
       foreign_key: :unit,
       type: :binary_id,
