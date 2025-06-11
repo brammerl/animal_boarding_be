@@ -8,7 +8,7 @@ defmodule AnimalBoardingBe.Application do
   @impl true
   def start(_type, _args) do
     children = [
-       AnimalBoarding.Repo,
+      AnimalBoarding.Repo
       # Starts a worker by calling: AnimalBoardingBe.Worker.start_link(arg)
       # {AnimalBoardingBe.Worker, arg}
     ]
