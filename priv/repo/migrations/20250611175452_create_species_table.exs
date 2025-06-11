@@ -10,7 +10,5 @@ defmodule AnimalBoarding.Repo.Migrations.CreateSpeciesTable do
     alter table(:animals) do
       add :species_id, references(:species, column: :species_id, type: :uuid, on_delete: :nilify_all)
     end
-
-    create index(:animals, [:species_id])
   end
 end

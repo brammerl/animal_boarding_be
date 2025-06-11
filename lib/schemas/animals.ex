@@ -22,5 +22,11 @@ defmodule AnimalBoarding.Animals do
       type: :binary_id,
       references: :unit_id
     )
+
+    belongs_to(:species, AnimalBoarding.Species,
+      foreign_key: :species_id,
+      type: :binary_id,
+      references: :species_id
+    )
   end
 end
